@@ -55,6 +55,14 @@
     node-fetch "^2.6.7"
     typed-ts-events "^1.1.1"
 
+"@waves/ts-lib-crypto@^1.4.4-beta.1":
+  version "1.4.4-beta.1"
+  resolved "https://registry.yarnpkg.com/@waves/ts-lib-crypto/-/ts-lib-crypto-1.4.4-beta.1.tgz#5a494f5ff3128b2f80c1890b1fb13d8ba2cb8c53"
+  integrity sha512-tlvThkMCoCDicOznW82wDZWQqfAWcm6ulQnuNzR++X9o0EOHM3Cj8LlS2pkgF0YjZrqEYHTp/4e0RXXYVY+dpw==
+  dependencies:
+    js-sha3 "^0.8.0"
+    node-forge "^0.10.0"
+
 "@waves/ts-types@^1.0.12":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@waves/ts-types/-/ts-types-1.1.0.tgz#717783919ec6d8e8ab33a38fc06e4da30e449c29"
@@ -290,6 +298,11 @@ is-core-module@^2.9.0:
   dependencies:
     has "^1.0.3"
 
+js-sha3@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/js-sha3/-/js-sha3-0.8.0.tgz#b9b7a5da73afad7dedd0f8c463954cbde6818840"
+  integrity sha512-gF1cRrHhIzNfToc802P800N8PpXS+evLLXfsVpowqmAFR9uwbi89WvXg2QspOmXL8QL86J4T1EpFu+yUkwJY3Q==
+
 local-pkg@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/local-pkg/-/local-pkg-0.4.2.tgz#13107310b77e74a0e513147a131a2ba288176c2f"
@@ -330,6 +343,11 @@ node-fetch@^2.6.7:
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
+
+node-forge@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
+  integrity sha512-PPmu8eEeG9saEUvI97fm4OYxXVB6bFvyNTyiUOBichBpFG8A1Ljw3bY62+5oOjDEMHRnd0Y7HQ+x7uzxOzC6JA==
 
 path-parse@^1.0.7:
   version "1.0.7"
