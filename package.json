@@ -11,6 +11,10 @@
   ],
   "author": "Sergey Melnikov <smelnikov@uniqsoft.ae>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smelnikov/vitest-environment-waves.git"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
