@@ -30,11 +30,11 @@ jobs:
       - name: Check types
         run: yarn run typecheck
 
-      - name: Build, pack and install environment for tests
+      - name: Build and link for tests
         run: |
           yarn build
-          yarn pack --filename env-waves.tgz
-          yarn add -D ./env-waves.tgz
+          yarn link
+          yarn link vitest-environment-waves
 
       - name: Run tests
         env:
