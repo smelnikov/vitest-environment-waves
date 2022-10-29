@@ -1,0 +1,16 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "declaration": true,
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noErrorTruncation": true,
+    "outDir": "./dist",
+    "pretty": true,
+    "sourceMap": false,
+    "strict": true,
+    "target": "esnext"
+  }
+}
