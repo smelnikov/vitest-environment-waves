@@ -15,7 +15,7 @@ export default <Environment>{
     let api = create(nodeApiURL);
     const networkByte = await api.tools.blocks.getNetworkByte();
 
-    Object.assign(global, { nodeApiURL, WavesNode: { api, networkByte } });
+    Object.assign(global, { WavesNode: { api, url: nodeApiURL, networkByte } });
 
     return {
       teardown() {},

@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     environment: 'waves',
     environmentOptions: {
-      globals: { TEST_VARIABLE: 'test value' },
+      nodeApiURL: 'http://localhost:6869',
     },
   },
 });
