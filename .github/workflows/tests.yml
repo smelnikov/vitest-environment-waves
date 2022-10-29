@@ -11,6 +11,11 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    services:
+      waves-private-node:
+        image: wavesplatform/waves-private-node:latest
+        ports:
+          - 6869:6869
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
