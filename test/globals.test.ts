@@ -1,7 +1,14 @@
 import { expect, it } from 'vitest';
+import { create } from '@waves/node-api-js';
 
-declare var TEST_VARIABLE: string;
+declare var WavesNode: { api: ReturnType<typeof create>; networkByte: number };
 
-it('Environment globals is accessible', () => {
-  expect(TEST_VARIABLE).toBe('test value');
+it('Waves node api is accessible', async () => {
+  await expect(WavesNode.api.blocks.fetchHeadersLast()).resolves;
+});
+
+it('Network byte is fetched', async () => {
+  expect(WavesNode.networkByte).toBe(
+    await WavesNode.api.tools.blocks.getNetworkByte()
+  );
 });
