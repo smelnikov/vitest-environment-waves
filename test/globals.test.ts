@@ -16,11 +16,11 @@ it('Waves node api url is the same as in the configuration', async () => {
 });
 
 it('Waves node api is accessible', async () => {
-  await expect(WavesNode.api.blocks.fetchHeadersLast()).resolves;
+  await WavesNode.api.blocks.fetchHeadersLast();
 });
 
-it('Network byte is fetched', async () => {
-  expect(WavesNode.networkByte).toBe(
-    await WavesNode.api.tools.blocks.getNetworkByte()
+it('Network byte is fetched correctly', async () => {
+  await expect(WavesNode.api.tools.blocks.getNetworkByte()).resolves.toBe(
+    WavesNode.networkByte
   );
 });
