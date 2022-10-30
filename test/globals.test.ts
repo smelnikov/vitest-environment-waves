@@ -1,13 +1,7 @@
 import { expect, it } from 'vitest';
 import { UserConfig } from 'vitest/config';
-import { create } from '@waves/node-api-js';
 import config from '../vitest.config';
-
-declare var WavesNode: {
-  api: ReturnType<typeof create>;
-  url: string;
-  networkByte: number;
-};
+import 'vitest-environment-waves';
 
 it('Waves node api url is the same as in the configuration', async () => {
   await expect(WavesNode.url).toBe(
