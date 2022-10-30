@@ -3,10 +3,7 @@ name: Tests
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - '**'
 
 jobs:
   tests:
@@ -17,31 +14,18 @@ jobs:
         ports:
           - 6869:6869
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
         with:
           cache: yarn
           node-version-file: .nvmrc
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Check code formatting
-        run: yarn run prettier
-
-      - name: Check types
-        run: yarn run typecheck
-
-      - name: Build and link for tests
-        run: |
+      - run: yarn install --frozen-lockfile
+      - run: yarn run prettier
+      - run: yarn run typecheck
+      - run: |
           yarn build
           yarn link
           yarn link vitest-environment-waves
-
-      - name: Run tests
+      - run: yarn run test
         env:
           CI: true
-        run: yarn run test
