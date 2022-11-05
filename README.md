@@ -1,6 +1,8 @@
-# `vitest-environment-waves`
+# vitest-environment-waves
 
 Vitest testing module for Waves blockchain.
+
+[![npm](https://img.shields.io/npm/v/vitest-environment-waves?color=729B1B&label=)](https://www.npmjs.com/package/vitest-environment-waves)
 
 ## Setup
 
@@ -13,7 +15,7 @@ npm install -D vitest-environment-waves vitest
 or yarn:
 
 ```sh
-npm install -D vitest-environment-waves vitest
+yarn add -D vitest-environment-waves vitest
 ```
 
 To enable the Waves environment, set the environment option in your Vitest configuration:
